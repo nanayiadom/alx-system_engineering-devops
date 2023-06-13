@@ -1,3 +1,2 @@
 #!/bin/bash
-readarray -t words && comm -23 <(printf '%s\n' "${words[@]}" | sort) <(printf '%s\n' "${words[@]}" | sort | uniq -d)
-
+sort | uniq -u
