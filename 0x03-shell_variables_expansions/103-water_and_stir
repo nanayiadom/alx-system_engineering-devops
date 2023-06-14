@@ -1,2 +1,2 @@
 #!/bin/bash
-echo "ibase=water; $WATER" | bc + "ibase=stir; $STIR" | bc | echo "obase=bestchol; $(cat)" | bc
+echo "obase=bestchol; $(echo "ibase=water; $WATER" | bc) + $(echo "ibase=stir; $STIR" | bc)" | bc
